@@ -15,7 +15,7 @@ function saveMessage(message) {
     messages.push(message);
     fs.writeFileSync(filePath, JSON.stringify(messages, null, 2), 'utf8');
   } catch (error) {
-    console.error('❌ Error saving message:', error.message);
+    console.error('Error saving message:', error.message);
   }
 }
 
@@ -27,7 +27,7 @@ function getMessages() {
     }
     return [];
   } catch (error) {
-    console.error('❌ Error reading messages:', error.message);
+    console.error('Error reading messages:', error.message);
     return [];
   }
 }
