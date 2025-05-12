@@ -8,19 +8,19 @@ const {saveMessage} = require('../data/messageStorage');
 
 
 router.get('/', (req, res) => {
-    res.render('home')
+    res.render('pages/home', { events });
 });
 
 router.get('/about', (req, res) => {
-    res.render('about', {team});
+    res.render('pages/about', {team});
 });
 
 router.get('/events', (req, res) => {
-    res.render('events', {events});
+    res.render('pages/events', {events});
 });
 
 router.get('/contact', (req, res) => {
-  res.render('contact');
+  res.render('pages/contact');
 });
 
 router.post('/contact', (req, res) => {
@@ -31,7 +31,7 @@ router.post('/contact', (req, res) => {
 });
 
 router.get('/thankyou', (req, res) => {
-  res.render('thankyou');
+  res.render('pages/thankyou');
 });
 
 module.exports = router;
