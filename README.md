@@ -6,7 +6,6 @@ This is a dynamic, multi-page **Community Portal Website** built using **Node.js
 
 ## Table of Contents
 - [Overview]
-- [Overview]
 - [Technologies Used]
 - [Team Members & Roles]
 - [Features]
