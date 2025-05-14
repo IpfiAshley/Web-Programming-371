@@ -39,7 +39,8 @@ h1, h2, h3 {
 
 /* Navbar */
 nav {
-  background: white;
+  background: rgba(255, 255, 255, 0.85); /* ✅ semi-transparent background */
+  backdrop-filter: blur(10px);          /* ✅ frosted-glass effect */
   padding: 16px 32px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   display: flex;
@@ -108,7 +109,7 @@ footer {
   text-align: center;
   padding: 20px 0;
   border-top: 1px solid #eee;
-  margin-top: 60px;
+  margin-top: 0; /* ✅ Remove the big space */
   font-size: 0.95rem;
 }
 
@@ -172,4 +173,84 @@ form button:hover {
     flex-direction: column;
     gap: 10px;
   }
+}
+
+.homepage-banner {
+  background-image: url('/images/home-page.jpg');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;
+  padding: 0;
+  height: 100vh;
+  text-align: center;
+  position: relative;
+  margin-top: -80px; /* ✅ Overlaps the navbar */
+  z-index: 0;
+}
+
+.banner-content {
+  padding-top: 300px; /* 👈 pushes all the content downward */
+}
+
+.banner-content h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.banner-content p.lead {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.button-group {
+  margin-top: 20px;
+}
+
+.button-group a {
+  text-decoration: none;
+  padding: 12px 24px;
+  margin: 0 10px;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.btn-primary {
+  background-color: #7754F6;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: white;
+  color: #7754F6;
+}
+
+.btn-secondary {
+  background-color: #7754F6;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: white;
+  color: #7754F6;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #7754F6;
+  border: 2px solid #7754F6;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0 10px;
+  transition: background-color 0.3s, color 0.3s;
+  text-decoration: none;
+}
+
+.btn-outline:hover {
+  background-color: #7754F6;
+  color: white;
 }
