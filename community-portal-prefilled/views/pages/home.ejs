@@ -1,31 +1,15 @@
-
 <%- include('../partials/header') %>
 
-<div class="container mt-4">
-  <h1>Welcome to the Community Portal</h1>
-  <p class="lead">Stay connected with your community. Find events, team info, and more!</p>
-
-  <h2 class="mt-5">Upcoming Events</h2>
-  <% if (events && events.length > 0) { %>
-    <div class="row">
-      <% events.forEach(event => { %>
-        <div class="col-md-4 mb-4">
-          <div class="card">
-            <img src="<%= event.image %>" class="card-img-top" alt="Event Image">
-            <div class="card-body">
-              <h5 class="card-title"><%= event.title %></h5>
-              <p class="card-text">
-                <strong>Date:</strong> <%= event.date %><br>
-                <strong>Location:</strong> <%= event.location %>
-              </p>
-            </div>
-          </div>
-        </div>
-      <% }) %>
+<section class="homepage-banner">
+  <div class="banner-content">
+    <h1>Welcome to the Community Portal</h1>
+    <p class="lead">A place to connect, collaborate, and grow together.</p>
+    <div class="button-group">
+      <a href="/about" class="btn btn-primary">Meet the Team</a>
+      <a href="/contact" class="btn btn-secondary">Get in Touch</a>
+      <a href="/events" class="btn btn-outline">Explore Events</a>
     </div>
-  <% } else { %>
-    <p>No events available at the moment.</p>
-  <% } %>
-</div>
+  </div>
+</section>
 
 <%- include('../partials/footer') %>
